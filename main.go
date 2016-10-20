@@ -9,4 +9,5 @@ func main() {
 	log.D(1)
 	log.D(2, 3, 4)
 	log.D("test")
+
 }

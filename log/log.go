@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"time"
 )
 
 var bw *bufio.Writer
@@ -11,7 +12,8 @@ var fp *os.File
 var err error
 
 func init() {
-	fp, err = os.Create("./test.log")
+	filename := time.Now().Format("log/2006_0102_1504_05.log")
+	fp, err = os.Create(filename)
 	if err != nil {
 		fmt.Println(err)
 	}
