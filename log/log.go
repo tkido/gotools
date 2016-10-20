@@ -19,6 +19,7 @@ func init() {
 	}
 	writer := bufio.NewWriter(fp)
 	bw = bufio.NewWriter(writer)
+	bw.WriteString(time.Now().Format("STARTED 2006_0102_1504_05.00\n"))
 }
 
 func D(v ...interface{}) {
@@ -26,6 +27,7 @@ func D(v ...interface{}) {
 }
 
 func Close() {
+	bw.WriteString(time.Now().Format("ENDED 2006_0102_1504_05.00\n"))
 	bw.Flush()
 	fp.Close()
 }
