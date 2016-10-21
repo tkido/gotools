@@ -1,6 +1,11 @@
 package main
 
-import "./log"
+import (
+	"fmt"
+
+	"./bitset"
+	"./log"
+)
 
 func main() {
 	defer log.Close()
@@ -10,4 +15,6 @@ func main() {
 	log.D(2, 3, 4)
 	log.D("test")
 
+	var b bitset.BitSet
+	fmt.Println(b)
 }
